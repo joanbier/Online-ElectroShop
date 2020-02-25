@@ -91,6 +91,7 @@ a.input-group-text:hover {
 .cart {
 
     position: fixed;
+    z-index: 1;
     top: 100px;
     right: 0px;
     width: 60px;
