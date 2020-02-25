@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Electro Shop</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top py-0">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" width="70" height="50" class="d-inline-block" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- J U M B O T R O N -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-warning">Welcome to ElectroShop</h1>
+        <p class="lead text-white">You can find here a lot of items</p>
+        <button class="btn btn-warning btn-lg mt-5" id="btn">
+          Click to see
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- C A R T + M O D A L -->
+  <div class="cart"><a href="#"><img class="cart__image" data-toggle="modal" data-target="#exampleModal"
+        src="assets/shopping-cart.png" alt="">
+      <div class="simpleCart_quantity" data-toggle="modal" data-target="#exampleModal"></div>
+    </a>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your Cart <span class="showIfEmpty">is Empty :(</span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="hideIfEmpty">
+          <div class="modal-body">
+            <div class="simpleCart_items table table-striped"></div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">To Pay</th>
+                  <th scope="col">Cost of Shimpment</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="simpleCart_total"></div>
+                  </td>
+                  <td>
+                    <div class="simpleCart_shipping"></div>
+                  </td>
+                  <td>
+                    <div class="simpleCart_grandTotal"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="text-info">Free delivery after the purchase of 3 products</span>
+          </div>
+          <div class="modal-footer">
+            <a href="javascript:;" type="button" class="btn btn-secondary simpleCart_empty">Clear</a>
+            <a href="javascript:;" type="button" data-dismiss="modal"
+              class="btn btn-primary simpleCart_checkout">Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- B R E A D C R U M B S -->
+  <div class="container ">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+      </ol>
+    </nav>
+    <!-- M A I N     S E C T I O N  -->
+    <main class="row">
+      <div class="col-md-3 d-none d-md-block d-lg-block  ">
+        <h2 class="mb-4">Categories</h2>
+        <ul class="list-group">
+          <li class="list-group-item ">Netbooks</li>
+          <li class="list-group-item active">Mobile Phones</li>
+          <li class="list-group-item">TV sets</li>
+          <li class="list-group-item">Household articles</li>
+          <li class="list-group-item">Consoles</li>
+        </ul>
+        <aside>
+          <a class="discount" href="#"><img class="discount-image" src="assets/sale.png" alt="" /></a>
+        </aside>
+      </div>
+
+      <div class="dropdown d-md-none d-lg-none">
+        <button class="btn btn-info dropdown-toggle m-3" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Categories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Netbooks</a>
+          <a class="dropdown-item" href="#">Mobile Phones</a>
+          <a class="dropdown-item" href="#">TV sets</a>
+          <a class="dropdown-item" href="#">Household articles</a>
+          <a class="dropdown-item" href="#">Consoles</a>
+        </div>
+      </div>
+
+      <div class="col-md-9 ">
+        <h2 class="mb-4 text-center">Products</h2>
+
+        <!-- PRODUCTS -->
+        <div class="row">
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card mb-3 simpleCart_shelfItem" style="width: 16rem;">
+              <img src="assets/Iphone11-Pro.png" class="card-img-top phone-image mx-auto item_thumb" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title item_name">
+                  Iphone 11 Plus
+                </h5>
+                <span class="badge badge-warning badge-small">New</span>
+                <p class="card-text">Some quick example text</p>
+                <span class="font-weight-bold border p-2 border-info rounded-pill item_price">999€</span>
+                <div class="input-group input-group-sm my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                  </div>
+                  <input type="number" min="1" value="1" class="col-3 form-control item_Quantity"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select col-6 item_size" id="inputGroupSelect02">
+                    <option selected value="64 GB">64 GB</option>
+                    <option value="128 GB">128 GB</option>
+                    <option value="256 GB">256 GB</option>
+                  </select>
+                  <div class="input-group-append">
+                    <a href="javascript:;" class="input-group-text bg-primary text-white  item_add"
+                      for="inputGroupSelect02">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card mb-3 simpleCart_shelfItem" style="width: 16rem;">
+              <img src="assets/nokia_9.png" class="card-img-top phone-image mx-auto item_thumb" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title item_name">
+                  Nokia 9
+                </h5>
+                <span class="badge badge-warning badge-small">New</span>
+                <p class="card-text">Some quick example text</p>
+                <span class="font-weight-bold border p-2 border-info rounded-pill item_price">369€</span>
+                <div class="input-group input-group-sm my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                  </div>
+                  <input type="number" min="1" value="1" class="col-3 form-control item_Quantity"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select col-6 item_size" id="inputGroupSelect02">
+                    <option selected value="64 GB">64 GB</option>
+                    <option value="128 GB">128 GB</option>
+                    <option value="256 GB">256 GB</option>
+                  </select>
+                  <div class="input-group-append">
+                    <a href="javascript:;" class="input-group-text bg-primary text-white  item_add"
+                      for="inputGroupSelect02">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card mb-3 simpleCart_shelfItem" style="width: 16rem;">
+              <img src="assets/Huawei P30Pro_orange.png" class="card-img-top phone-image mx-auto item_thumb"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title item_name">
+                  Huawei P30 Pro
+                </h5>
+                <p class="card-text">Some quick example text</p>
+                <span class="font-weight-bold border p-2 border-info rounded-pill item_price">509€</span>
+                <div class="input-group input-group-sm my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                  </div>
+                  <input type="number" min="1" value="1" class="col-3 form-control item_Quantity"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select col-6 item_size" id="inputGroupSelect02">
+                    <option selected value="64 GB">64 GB</option>
+                    <option value="128 GB">128 GB</option>
+                    <option value="256 GB">256 GB</option>
+                  </select>
+                  <div class="input-group-append">
+                    <a href="javascript:;" class="input-group-text bg-primary text-white  item_add"
+                      for="inputGroupSelect02">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card mb-3 simpleCart_shelfItem" style="width: 16rem;">
+              <img src="assets/Huawei-P8-LITE.png" class="card-img-top phone-image mx-auto item_thumb" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title item_name">
+                  Huawei P8 Lite
+                </h5>
+                <p class="card-text">Some quick example text</p>
+                <span class="font-weight-bold border p-2 border-info rounded-pill item_price">59€</span>
+                <div class="input-group input-group-sm my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                  </div>
+                  <input type="number" min="1" value="1" class="col-3 form-control item_Quantity"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select col-6 item_size" id="inputGroupSelect02">
+                    <option selected value="64 GB">64 GB</option>
+                    <option value="128 GB">128 GB</option>
+                    <option value="256 GB">256 GB</option>
+                  </select>
+                  <div class="input-group-append">
+                    <a href="javascript:;" class="input-group-text bg-primary text-white  item_add"
+                      for="inputGroupSelect02">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card mb-3 simpleCart_shelfItem" style="width: 16rem;">
+              <img src="assets/iphone8-plus.png" class="card-img-top phone-image mx-auto item_thumb" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title item_name">
+                  Iphone 8 Plus
+                </h5>
+                <p class="card-text">Some quick example text</p>
+                <span class="font-weight-bold border p-2 border-info rounded-pill item_price">419€</span>
+                <div class="input-group input-group-sm my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                  </div>
+                  <input type="number" min="1" value="1" class="col-3 form-control item_Quantity"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select col-6 item_size" id="inputGroupSelect02">
+                    <option selected value="64 GB">64 GB</option>
+                    <option value="128 GB">128 GB</option>
+                    <option value="256 GB">256 GB</option>
+                  </select>
+                  <div class="input-group-append">
+                    <a href="javascript:;" class="input-group-text bg-primary text-white  item_add"
+                      for="inputGroupSelect02">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card mb-3 simpleCart_shelfItem" style="width: 16rem;">
+              <img src="assets/motorola-one-1000.png" class="card-img-top phone-image mx-auto item_thumb" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title item_name">
+                  Motorola One
+                </h5>
+                <p class="card-text">Some quick example text</p>
+                <span class="font-weight-bold border p-2 border-info rounded-pill item_price">249€</span>
+                <div class="input-group input-group-sm my-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                  </div>
+                  <input type="number" min="1" value="1" class="col-3 form-control item_Quantity"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <select class="custom-select col-6 item_size" id="inputGroupSelect02">
+                    <option selected value="64 GB">64 GB</option>
+                    <option value="128 GB">128 GB</option>
+                    <option value="256 GB">256 GB</option>
+                  </select>
+                  <div class="input-group-append">
+                    <a href="javascript:;" class="input-group-text bg-primary text-white  item_add"
+                      for="inputGroupSelect02">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PAGE NAVIGATION -->
+          <nav aria-label="Page navigation example" class="mx-auto">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- F O O T E R -->
+  <footer class="bg-secondary text-white p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="font-weight-light">ElectroShop</h3>
+          <p class="font-weight-lighter">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+            quam exercitationem aspernatur pariatur, architecto impedit omnis
+            ipsum, non, laborum qui cumque nulla eligendi amet eaque.
+            Consequuntur eius voluptates repudiandae atque?
+          </p>
+        </div>
+        <div class="col-md-4">
+          <form action="">
+            <h5>Newsletter</h5>
+            <div class="input-group mb-3">
+              <input placeholder="@email address" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-info">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="second-footer p-3 d-flex justify-content-center">
+    <p class="m-0 font-weight-lighter">CopyRight &copy; ElectroShop</p>
+  </div>
+
+
+  <!-- Scripts BOOTSTRAP + SIMPLECART -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script src="js/simpleCart.js"></script>
+
+  <!-- IMPLEMENTATION AND MODIFICATION SIMPLECART'S SCRIPT -->
+  <script>
+    simpleCart({
+
+      // array representing the format and columns of the cart, see 
+      // the cart columns documentation
+      cartColumns: [{
+          attr: "name",
+          label: "Name"
+        },
+        {
+          view: "image",
+          attr: "thumb"
+
+        },
+        {
+          attr: "size",
+          label: 'Capacity'
+        },
+        {
+          attr: "price",
+          label: "Price",
+          view: 'currency'
+        },
+
+        {
+          view: "decrement",
+          label: false
+        },
+
+        {
+          attr: "quantity",
+          label: "Qty"
+        },
+        {
+          view: "increment",
+          label: false
+        },
+        {
+          attr: "total",
+          label: "SubTotal",
+          view: 'currency'
+        },
+        {
+          view: "remove",
+          text: "Remove",
+          label: false
+        }
+      ],
+
+      // "div" or "table" - builds the cart as a table or collection of divs
+      cartStyle: "table",
+
+      // how simpleCart should checkout, see the checkout reference for more info 
+      checkout: {
+        type: "PayPal",
+        email: "j.biernat955@gmail.com"
+      },
+
+      // set the currency, see the currency reference for more info
+      currency: "EUR",
+
+      // collection of arbitrary data you may want to store with the cart, 
+      // such as customer info
+      data: {},
+
+      // set the cart langauge (may be used for checkout)
+      language: "english-us",
+
+      // array of item fields that will not be sent to checkout
+      excludeFromCheckout: [],
+
+      // custom function to add shipping cost
+      shippingCustom: function () {
+        if (simpleCart.quantity() >= 3) {
+          return 0;
+        } else {
+          return 4.99;
+        }
+      },
+
+      // flat rate shipping option
+      shippingFlatRate: 0,
+
+      // added shipping based on this value multiplied by the cart quantity
+      shippingQuantityRate: 0,
+
+      // added shipping based on this value multiplied by the cart subtotal
+      shippingTotalRate: 0,
+
+      // tax rate applied to cart subtotal
+      taxRate: 0,
+
+      // true if tax should be applied to shipping
+      taxShipping: false,
+
+      // event callbacks 
+      beforeAdd: null,
+      afterAdd: null,
+      load: null,
+      beforeSave: null,
+      afterSave: null,
+      update: null,
+      ready: null,
+      checkoutSuccess: null,
+      checkoutFail: null,
+      beforeCheckout: null
+    });
+
+    simpleCart.bind("afterAdd", function () {
+      $(".cart").addClass("tada")
+      setTimeout(() => $(".cart").removeClass("tada"), 500);;
+    });
+
+
+    simpleCart.bind('update', function () {
+      if (simpleCart.quantity() == 0) {
+        $(".hideIfEmpty").hide();
+        $(".showIfEmpty").show();
+      } else {
+        $(".hideIfEmpty").show();
+        $(".showIfEmpty").hide();
+      }
+    })
+  </script>
+</body>
+
+</html>
